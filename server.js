@@ -10,7 +10,7 @@ const app = express();
 // ── Security ──────────────────────────────────────────────────────────────
 app.use(helmet());
 app.use(cors({
-  origin:'https://treasure-hunt-frontend-coral.vercel.app/' || "",
+  origin:'https://treasure-hunt-frontend-coral.vercel.app' || "",
   credentials: true,
 }));
 
