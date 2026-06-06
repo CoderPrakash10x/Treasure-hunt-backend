@@ -17,13 +17,13 @@ app.use(cors({
 // ── Rate limiting ─────────────────────────────────────────────────────────
 app.use('/api/auth', rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 1000,
+  max: 3000,
   message: { message: 'Too many requests. Try again later.' },
 }));
 
 app.use('/api', rateLimit({
   windowMs: 60 * 1000,
-  max: 2000,
+  max: 5000,
 }));
 
 // ── Body parsing ──────────────────────────────────────────────────────────
